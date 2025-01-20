@@ -1,0 +1,130 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DOCUMENT PREAMBLE %%%
+%This template was adapted from a template by Roza Aceska.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{report}
+\usepackage[english]{babel}
+%\usepackage[backend=biber]{biblatex}
+\usepackage{url}
+%\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{tabularray}
+\usepackage{adjustbox}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cite}
+\usepackage{cleveref}
+\usepackage{textcomp}
+\usepackage{minted}
+\usepackage{csvsimple}
+
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Report Assignment Part 2}
+% Title
+\author{}
+% Author
+\date{}
+% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+
+%%% Macros
+\newcommand{\AssFile}[1]{\texttt{#1}}
+\renewcommand*{\thesection}{Q\arabic{section}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{titlepage}
+        \centering
+        \vspace*{0.5 cm}
+        \begin{center}
+            \textsc{\Large Introduction to Data Science WS 24/25}\\[2.0 cm]
+        \end{center}
+        \rule{\linewidth}{0.2 mm} \\[0.4 cm]
+        { \huge \bfseries \thetitle}\\
+        \rule{\linewidth}{0.2 mm} \\[1.5 cm]
+
+        \begin{flushright}
+            \large
+            \emph{Group $999$:} \\
+            Student 1 (Matr. Number) \\
+            Student 2 (Matr. Number) \\
+            Student 3 (Matr. Number)
+        \end{flushright}
+
+    \end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     \section*{Statement on the usage of LLMs}
+     \textlangle If you make use of generative AI in the form of LLMs, state in which tasks you used them for which purpose.
+     You may also further argue why the specific usage does not detract from your understanding of a particular task. \textrangle
+
+     \newpage
+
+    \section{Frequent Itemsets and Association Rules}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\linewidth]{example-image-a}
+        \caption{Simple figure example.}
+        \label{fig:example-a}
+    \end{figure}
+
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.48\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{example-image-b}
+            \caption{Subfigure B}
+            \label{fig:example-b}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.48\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{example-image-c}
+            \caption{Subfigure C}
+            \label{fig:example-c}
+        \end{subfigure}
+        \caption{Example of using Subfigures.}
+    \end{figure}
+    \section{Natural Language Processing}
+    \section{Process Mining}
+    \section{Time Series Analysis}
+    \section{Distributed Data Processing}
+    	\subsection{a}
+\inputminted[fontsize=\tiny]{python}{ distributed_data_processing/best_movies.py  }
+
+\csvautotabular[respect all]{ top8.csv  }
+
+    	\subsection{b}
+\inputminted[fontsize=\tiny]{python}{ distributed_data_processing/haters.py  }
+
+          \subsection{c}
+          Before handing the outputs of mappers to reducers, the combiners intercept the pairs and combine the counts of reviews with the same key, though in the sense of grouping in subsets. This reduces the communication overhead that is sent to the reducers. The best-case scenario is when the combiners get the similar workloads, so that with the parallel processing, no combiners is processing too much data.
+
+\end{document}
+

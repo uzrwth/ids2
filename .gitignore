@@ -1,0 +1,4 @@
+text_mining/*.csv
+distributed_data_processing/*.csv
+process_mining/
+time_series/

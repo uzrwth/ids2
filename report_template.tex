@@ -28,6 +28,7 @@
 \usepackage{minted}
 \usepackage{csvsimple}
 
+
 \setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 
 \title{Report Assignment Part 2}
@@ -71,9 +72,9 @@
         \begin{flushright}
             \large
             \emph{Group $999$:} \\
-            Student 1 (Matr. Number) \\
-            Student 2 (Matr. Number) \\
-            Student 3 (Matr. Number)
+            Yiğit Kaan Yıldız (464480) \\
+            Zhongjian Rong (464649) \\
+            Ali Berger (383691)
         \end{flushright}
 
     \end{titlepage}
@@ -86,39 +87,13 @@
 
      \newpage
 
-    \section{Frequent Itemsets and Association Rules}
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=0.8\linewidth]{example-image-a}
-        \caption{Simple figure example.}
-        \label{fig:example-a}
-    \end{figure}
-
-    \begin{figure}[h!]
-        \centering
-        \begin{subfigure}[b]{0.48\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{example-image-b}
-            \caption{Subfigure B}
-            \label{fig:example-b}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.48\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{example-image-c}
-            \caption{Subfigure C}
-            \label{fig:example-c}
-        \end{subfigure}
-        \caption{Example of using Subfigures.}
-    \end{figure}
-    \section{Natural Language Processing}
-    \section{Process Mining}
-    \section{Time Series Analysis}
     \section{Distributed Data Processing}
     	\subsection{a}
 \inputminted[fontsize=\tiny]{python}{ distributed_data_processing/best_movies.py  }
 
 \csvautotabular[respect all]{ top8.csv  }
+
+There are 8 records in the csv file, but the latex csvsimple package doesn't work well with csv files with special characters such as ",", and it only shows 5 records here. The full records can be seen in the top8.csv file.
 
     	\subsection{b}
 \inputminted[fontsize=\tiny]{python}{ distributed_data_processing/haters.py  }
